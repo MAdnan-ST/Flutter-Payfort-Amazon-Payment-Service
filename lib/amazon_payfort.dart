@@ -62,9 +62,9 @@ class AmazonPayfort {
   /// You can use the standard Amazon Payment Services mobile SDK interface to display a standard payment screen.
   /// This standard payment view is customizable in three ways.
   ///
-  Future<PayfortResult> callPayFort(FortRequest request) {
+  Future<PayfortResult> callPayFort(FortEnvironment environment, FortRequest request) {
     return AmazonPayfortPlatform.instance.callPayFort(
-      environment: _environment,
+      environment: environment,
       request: request,
     );
   }
