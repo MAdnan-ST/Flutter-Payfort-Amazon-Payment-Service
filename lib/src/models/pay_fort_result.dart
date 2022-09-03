@@ -11,7 +11,6 @@ class PayfortResult {
     this.merchantReference,
     this.merchantExtra,
     this.merchantExtra1,
-    this.orderDescription,
     this.amount,
     this.currency,
     this.fortId,
@@ -21,7 +20,6 @@ class PayfortResult {
     this.paymentOption,
     this.eci,
     this.authorizationCode,
-    this.customerIp,
     this.customerName,
     this.expiryDate,
     this.cardNumber,
@@ -91,14 +89,6 @@ class PayfortResult {
   ///
   String? authorizationCode;
 
-  /// It holds the description of the order.
-  ///
-  String? orderDescription;
-
-  /// It holds the customer’s IP address.
-  ///
-  String? customerIp;
-
   /// The customer’s name.
   ///
   String? customerName;
@@ -137,9 +127,7 @@ class PayfortResult {
       paymentOption: data['payment_option'],
       eci: data['eci'],
       authorizationCode: data['authorization_code'],
-      customerIp: data['customer_ip'],
       customerName: data['customer_name'],
-      orderDescription: data['order_description'],
       expiryDate: data['expiry_date'],
       cardNumber: data['card_number'],
       status: data['status'],
@@ -165,9 +153,7 @@ class PayfortResult {
       'payment_option': paymentOption,
       'eci': eci,
       'authorization_code': authorizationCode,
-      'customer_ip': customerIp,
       'customer_name': customerName,
-      'order_description': orderDescription,
       'expiry_date': expiryDate,
       'card_number': cardNumber,
       'status': status,

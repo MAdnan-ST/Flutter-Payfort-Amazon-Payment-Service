@@ -5,9 +5,7 @@ class FortRequest {
     required this.amount,
     required this.customerName,
     required this.customerEmail,
-    required this.orderDescription,
     required this.sdkToken,
-    required this.customerIp,
     this.currency = 'USD',
     this.language = 'en',
     this.merchantReference,
@@ -49,10 +47,6 @@ class FortRequest {
   ///
   final String customerEmail;
 
-  /// A description of the order.
-  ///
-  final String? orderDescription;
-
   /// The checkout page and messages language.
   /// By default language: [en].
   ///
@@ -74,12 +68,6 @@ class FortRequest {
   ///
   final String? eci;
 
-  /// It holds the customer’s IP address.
-  /// It’s Mandatory, if the fraud service is active.
-  /// We support IPv4 and IPv6 as shown in the example below.
-  ///
-  final String? customerIp;
-
   /// The customer’s phone number.
   ///
   final String? phoneNumber;
@@ -94,13 +82,11 @@ class FortRequest {
       'currency': currency,
       'customer_name': customerName,
       'customer_email': customerEmail,
-      'order_description': orderDescription,
       'language': language,
       'sdk_token': sdkToken,
       'token_name': tokenName,
       'payment_option': paymentOption,
       'eci': eci,
-      'customer_ip': customerIp,
       'phone_number': phoneNumber,
     };
   }
@@ -113,13 +99,11 @@ class FortRequest {
     String? merchantExtra1,
     String? customerName,
     String? customerEmail,
-    String? orderDescription,
     String? language,
     String? sdkToken,
     String? tokenName,
     String? paymentOption,
     String? eci,
-    String? customerIp,
     String? phoneNumber,
   }) {
     return FortRequest(
@@ -130,13 +114,11 @@ class FortRequest {
       merchantExtra1: merchantExtra1 ?? this.merchantExtra1,
       customerName: customerName ?? this.customerName,
       customerEmail: customerEmail ?? this.customerEmail,
-      orderDescription: orderDescription ?? this.orderDescription,
       language: language ?? this.language,
       sdkToken: sdkToken ?? this.sdkToken,
       tokenName: tokenName ?? this.tokenName,
       paymentOption: paymentOption ?? this.paymentOption,
       eci: eci ?? this.eci,
-      customerIp: customerIp ?? this.customerIp,
       phoneNumber: phoneNumber ?? this.phoneNumber,
     );
   }

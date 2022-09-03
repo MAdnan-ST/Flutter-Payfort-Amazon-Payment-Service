@@ -106,12 +106,10 @@ class AmazonPayfortPlugin : FlutterPlugin,
         requestMap["merchant_reference"] = call.argument<String>("merchant_reference")
         requestMap["merchant_extra"] = call.argument<String>("merchant_extra")
         requestMap["merchant_extra1"] = call.argument<String>("merchant_extra1")
-        requestMap["order_description"] = call.argument<String>("order_description")
         requestMap["sdk_token"] = call.argument<String>("sdk_token")
         requestMap["token_name"] = call.argument<String>("token_name")
         requestMap["payment_option"] = call.argument<String>("payment_option")
         requestMap["eci"] = call.argument<String>("eci")
-        requestMap["customer_ip"] = call.argument<String>("customer_ip")
         requestMap["phone_number"] = call.argument<String>("phone_number")
         return requestMap
     }
