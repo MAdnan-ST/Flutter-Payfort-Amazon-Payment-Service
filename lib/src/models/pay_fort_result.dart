@@ -20,7 +20,6 @@ class PayfortResult {
     this.paymentOption,
     this.eci,
     this.authorizationCode,
-    this.customerName,
     this.expiryDate,
     this.cardNumber,
     this.status,
@@ -89,10 +88,6 @@ class PayfortResult {
   ///
   String? authorizationCode;
 
-  /// The customer’s name.
-  ///
-  String? customerName;
-
   /// The card’s expiry date.
   ///
   String? expiryDate;
@@ -127,7 +122,6 @@ class PayfortResult {
       paymentOption: data['payment_option'],
       eci: data['eci'],
       authorizationCode: data['authorization_code'],
-      customerName: data['customer_name'],
       expiryDate: data['expiry_date'],
       cardNumber: data['card_number'],
       status: data['status'],
@@ -153,7 +147,6 @@ class PayfortResult {
       'payment_option': paymentOption,
       'eci': eci,
       'authorization_code': authorizationCode,
-      'customer_name': customerName,
       'expiry_date': expiryDate,
       'card_number': cardNumber,
       'status': status,

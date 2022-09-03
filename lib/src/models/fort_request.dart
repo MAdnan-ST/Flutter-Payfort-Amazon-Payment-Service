@@ -3,7 +3,6 @@ import 'dart:convert';
 class FortRequest {
   FortRequest({
     required this.amount,
-    required this.customerName,
     required this.customerEmail,
     required this.sdkToken,
     this.currency = 'USD',
@@ -38,10 +37,6 @@ class FortRequest {
   final String? merchantExtra;
 
   final String? merchantExtra1;
-
-  /// The customer’s name.
-  ///
-  final String customerName;
 
   /// The customer’s email. Example: customer1@domain.com
   ///
@@ -80,7 +75,6 @@ class FortRequest {
       'merchant_extra': merchantExtra,
       'merchant_extra1': merchantExtra1,
       'currency': currency,
-      'customer_name': customerName,
       'customer_email': customerEmail,
       'language': language,
       'sdk_token': sdkToken,
@@ -97,7 +91,6 @@ class FortRequest {
     String? merchantReference,
     String? merchantExtra,
     String? merchantExtra1,
-    String? customerName,
     String? customerEmail,
     String? language,
     String? sdkToken,
@@ -112,7 +105,6 @@ class FortRequest {
       merchantReference: merchantReference ?? this.merchantReference,
       merchantExtra: merchantExtra ?? this.merchantExtra,
       merchantExtra1: merchantExtra1 ?? this.merchantExtra1,
-      customerName: customerName ?? this.customerName,
       customerEmail: customerEmail ?? this.customerEmail,
       language: language ?? this.language,
       sdkToken: sdkToken ?? this.sdkToken,
