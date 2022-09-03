@@ -1,4 +1,4 @@
-package com.vvvirani.amazon_payfort
+package com.smarttechsys.amazon_payfort
 
 import android.content.Context
 
@@ -28,7 +28,7 @@ class AmazonPayfortPlugin : FlutterPlugin,
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger,
-            "vvvirani/amazon_payfort")
+            "com.smarttechsys.extra_services/amazon_payfort")
         channel.setMethodCallHandler(this)
 
         context = flutterPluginBinding.applicationContext

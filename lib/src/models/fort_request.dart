@@ -5,7 +5,7 @@ class FortRequest {
     required this.amount,
     required this.customerEmail,
     required this.sdkToken,
-    this.currency = 'USD',
+    this.currency = 'SAR',
     this.language = 'en',
     this.merchantReference,
     this.merchantExtra,

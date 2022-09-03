@@ -9,7 +9,7 @@ import 'amazon_payfort_platform_interface.dart';
 /// An implementation of [AmazonPayfortPlatform] that uses method channels.
 class MethodChannelAmazonPayfort extends AmazonPayfortPlatform {
   /// The method channel used to interact with the native platform.
-  final methodChannel = const MethodChannel('vvvirani/amazon_payfort');
+  final methodChannel = const MethodChannel('com.smarttechsys.extra_services/amazon_payfort');
 
   final LocalPlatform _platform = LocalPlatform();
 

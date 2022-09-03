@@ -1,4 +1,4 @@
-group 'com.vvvirani.amazon_payfort'
+group 'com.smarttechsys.amazon_payfort'
 version '1.0-SNAPSHOT'
 
 buildscript {

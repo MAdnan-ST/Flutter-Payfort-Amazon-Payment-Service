@@ -1,4 +1,4 @@
-package com.vvvirani.amazon_payfort
+package com.smarttechsys.amazon_payfort
 
 import android.app.Activity
 import android.content.Intent
