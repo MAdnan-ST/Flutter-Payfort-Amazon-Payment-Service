@@ -34,7 +34,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.vvvirani.amazon_payfort
+        package: com.smarttechsys.amazon_payfort
         pluginClass: AmazonPayfortPlugin
       ios:
         pluginClass: AmazonPayfortPlugin
