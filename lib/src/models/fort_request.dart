@@ -11,6 +11,8 @@ class FortRequest {
     this.currency = 'USD',
     this.language = 'en',
     this.merchantReference,
+    this.merchantExtra,
+    this.merchantExtra1,
     this.tokenName,
     this.paymentOption,
     this.eci,
@@ -34,6 +36,10 @@ class FortRequest {
   /// The Merchant’s unique order number.
   ///
   final String? merchantReference;
+
+  final String? merchantExtra;
+
+  final String? merchantExtra1;
 
   /// The customer’s name.
   ///
@@ -83,6 +89,8 @@ class FortRequest {
       'command': command,
       'amount': amount.toString(),
       'merchant_reference': '${DateTime.now().millisecondsSinceEpoch}',
+      'merchant_extra': merchantExtra,
+      'merchant_extra1': merchantExtra1,
       'currency': currency,
       'customer_name': customerName,
       'customer_email': customerEmail,
@@ -101,6 +109,8 @@ class FortRequest {
     num? amount,
     String? currency,
     String? merchantReference,
+    String? merchantExtra,
+    String? merchantExtra1,
     String? customerName,
     String? customerEmail,
     String? orderDescription,
@@ -116,6 +126,8 @@ class FortRequest {
       amount: amount ?? this.amount,
       currency: currency ?? this.currency,
       merchantReference: merchantReference ?? this.merchantReference,
+      merchantExtra: merchantExtra ?? this.merchantExtra,
+      merchantExtra1: merchantExtra1 ?? this.merchantExtra1,
       customerName: customerName ?? this.customerName,
       customerEmail: customerEmail ?? this.customerEmail,
       orderDescription: orderDescription ?? this.orderDescription,

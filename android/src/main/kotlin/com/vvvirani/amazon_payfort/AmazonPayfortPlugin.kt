@@ -104,6 +104,8 @@ class AmazonPayfortPlugin : FlutterPlugin,
         requestMap["amount"] = call.argument<String>("amount")
         requestMap["language"] = call.argument<String>("language")
         requestMap["merchant_reference"] = call.argument<String>("merchant_reference")
+        requestMap["merchant_extra"] = call.argument<String>("merchant_extra")
+        requestMap["merchant_extra1"] = call.argument<String>("merchant_extra1")
         requestMap["order_description"] = call.argument<String>("order_description")
         requestMap["sdk_token"] = call.argument<String>("sdk_token")
         requestMap["token_name"] = call.argument<String>("token_name")

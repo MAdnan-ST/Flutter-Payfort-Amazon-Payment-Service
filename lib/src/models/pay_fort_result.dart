@@ -9,6 +9,8 @@ class PayfortResult {
     this.responseMessage,
     this.command,
     this.merchantReference,
+    this.merchantExtra,
+    this.merchantExtra1,
     this.orderDescription,
     this.amount,
     this.currency,
@@ -47,6 +49,10 @@ class PayfortResult {
   /// The Merchant’s unique order number.
   ///
   String? merchantReference;
+
+  String? merchantExtra;
+
+  String? merchantExtra1;
 
   /// The transaction’s amount.
   /// Each currency has predefined allowed decimal points that should be taken into consideration when sending the amount.
@@ -120,6 +126,8 @@ class PayfortResult {
       responseMessage: data['response_message'],
       command: data['command'],
       merchantReference: data['merchant_reference'],
+      merchantExtra: data['merchant_extra'],
+      merchantExtra1: data['merchant_extra1'],
       amount: data['amount'],
       currency: data['currency'],
       fortId: data['fort_id'],
@@ -146,6 +154,8 @@ class PayfortResult {
       'response_message': responseMessage,
       'command': command,
       'merchant_reference': merchantReference,
+      'merchant_extra': merchantExtra,
+      'merchant_extra1': merchantExtra1,
       'amount': amount,
       'currency': currency,
       'fort_id': fortId,
